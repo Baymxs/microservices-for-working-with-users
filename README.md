@@ -1,0 +1,2 @@
+# microservices-for-working-with-users
+Microservice architecture project that contains a web service and processing service. The web service receives requests from the client and sends them to the message queue and creates a callback queue to receive a response for a specific request from another service. The processing service receives messages from the queue, processes the requests accordingly and sends a response to the callback queue.
