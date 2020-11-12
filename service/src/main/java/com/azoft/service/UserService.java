@@ -67,7 +67,7 @@ public class UserService {
         if (requestType.equals("get")) {
             User user = userRepository.
                     findById(id).
-                    orElseThrow(() -> new ResourceNotFoundException("User with id [" + id + "]вввввввввввввввввввввввввввввввввввввввввв not found"));
+                    orElseThrow(() -> new ResourceNotFoundException("User with id [" + id + "] not found"));
 
             log.info("User with id [{}] was received", id);
             return new UserServiceResponseDto<>(new UserDto(user.getName(), user.getSurname(), user.getPatronymic(), user.getEmail()), 200, "Success");
